@@ -6,6 +6,7 @@ import Login from './components/Login/Login.jsx'
 import Signup from './components/Signup/Signup.jsx'
 import Home from './components/Home/Home.jsx'
 import ChatList from './components/ChatList/ChatList.jsx'
+import Error404 from './components/Error404/Error404.jsx'
 
 const ProtectedRouteOutlet = ({ condition = false }) => {
   if(condition) return <Outlet />;
@@ -27,11 +28,11 @@ const App = () => {
     <Routes>
       <Route path="/" element={Layout}>
         <Route index={true} element={<Home />}></Route>
-        {/* <Route path="login" element={<Login />}></Route> */}
         <Route path="signup" element={<Signup />}></Route>
         <Route element={<ProtectedRouteOutlet condition={userDetails !== null} />}>
           <Route path='/chat' element={<ChatList />} />
         </Route>
+        <Route path="*" element={<Error404 />} />
       </Route>
     </Routes>
   )

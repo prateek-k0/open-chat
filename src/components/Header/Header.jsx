@@ -7,6 +7,7 @@ import Modal from '../Modal/Modal';
 import CreateNewChat from '../CreateNewChat/CreateNewChat';
 import JoinChat from '../JoinChat/JoinChat';
 import CreateNewDM from '../CreatNewDM/CreateNewDM';
+import IconPersonCircle from '../../common/Icons/IconPersonCircle';
 
 const Header = () => {
   const userDetails = useSelector(userDetailsSelector);
@@ -55,10 +56,10 @@ const Header = () => {
         </p>
       </Link>
       {userDetails !== null && <button 
-        className='text-md border border-white rounded-md px-4 py-1 bg-white text-slate-800 font-medium hover:bg-slate-800 hover:text-white transition-colors profile-button'
+        className='text-white hover:bg-slate-600 rounded-full px-1 py-1 transition-colors profile-button'
         onClick={() => setProfilePopupState(p => !p)}
         >
-          Profile
+          <IconPersonCircle width="28" height="28" />
         </button>}
       {profilePopupState === true && (
         <ul className='absolute bg-slate-800 text-white py-2 px-2 flex flex-col items-start right-8 top-14 border border-gray-500 w-56 transition-all'>

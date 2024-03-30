@@ -21,7 +21,7 @@ const MessageItem = ({ message, includeUsername = true, isSenderSameAsPrevious =
   return (
     <div className={`mx-2 ${isSenderSameAsPrevious ? 'mt-0.5' : 'mt-2'} flex w-fit flex-col gap-y-1 ${isUser ? 'ml-auto' : 'mr-auto'} message-container-${isUser ? 'left' : 'right'}`}>
       {includeUsername && <p className="text-gray-200 font-light text-sm w-fit font-sans">{message.sentBy.username}</p>}
-      <div className={`${isUser ? 'text-slate-800 bg-white text-right' : 'text-white bg-slate-700 text-left'} py-2 px-4 rounded-md w-fit break-all`}>
+      <div className={`${isUser ? 'text-slate-800 bg-white text-right' : 'text-white bg-slate-700 text-left'} py-2 px-4 rounded-lg w-fit break-all`}>
         {message.message}
         <p className={` ${isUser ? 'text-slate-600' : 'text-slate-100'} font-light text-xs mt-1 font-sans`}>{date}</p>
       </div>

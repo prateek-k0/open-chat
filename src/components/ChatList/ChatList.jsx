@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useGetMessagesQuery, useOpenRoomAcknowledgeMutation } from '../../api/MessageApi'
-import Error from '../Error/Error.jsx';
-import CreateNewChat from '../CreateNewChat/CreateNewChat.jsx';
 import ChatItem from '../ChatItem/ChatItem.jsx';
 import ChatView from '../ChatView/ChatView.jsx';
-import JoinChat from '../JoinChat/JoinChat.jsx';
 import { useSelector } from 'react-redux';
 import { userDetailsSelector } from '../../store/slices/UserDetailsSlice.js';
+import IconBxArrowToRight from '../../common/Icons/IconBxArrowToRight.jsx';
+import IconBxArrowToLeft from '../../common/Icons/IconBxArrowToLeft.jsx';
 
 const ChatList = () => {
   const userDetails = useSelector(userDetailsSelector);
@@ -28,7 +27,7 @@ const ChatList = () => {
   }, [sendRoomAck, userDetails, selectedChat, data]);
 
   if(isLoading === true) return <p>Loading Rooms Data</p>;
-  if(error) return <Error message={'Could not load messages'} />
+  if(error) return <div className='flex h-full font-mono text-center text-red-500 font-semibold text-xl'>Could not load Images</div>
   let roomJSX = <></>;
   const roomData = Object.values(data);
   
@@ -63,8 +62,8 @@ const ChatList = () => {
         <div className='overflow-y-auto overflow-x-auto max-h-full'>
           {roomJSX}
         </div>
-        <button className="bottom-2 right-2 absolute trigger w-12 h-12 rounded-md bg-white text-slate-700 flex justify-center items-center font-bold text-xl" onClick={() => setListBarState(s => !s)}>
-          {listBarState === true ? '>>' : '<<'}
+        <button className="bottom-2 right-2 absolute trigger w-12 h-12 rounded-full bg-white text-slate-700 flex justify-center items-center font-bold text-xl" onClick={() => setListBarState(s => !s)}>
+          {listBarState === true ? <IconBxArrowToRight width="24" height="24" /> : <IconBxArrowToLeft width="24" height="24" />}
         </button>
       </div>
       <div className='w-max flex-1 border-l-slate-700 border-l min-w-80'>
