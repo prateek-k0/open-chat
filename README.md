@@ -1,4 +1,6 @@
-# React + Vite
+# Chat application POC with socket.io and RTK Query
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
