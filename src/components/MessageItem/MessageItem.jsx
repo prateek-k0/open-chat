@@ -12,7 +12,7 @@ const MessageItem = ({ message, includeUsername = true, isSenderSameAsPrevious =
   if(isSysMessage) {
     return (
       <div className="flex justify-center w-full my-6">
-        <div className="mx-20 max-w-full box-border rounded-md bg-gray-800 w-fit px-4 py-2">
+        <div className="mx-20 max-w-full box-border rounded-lg bg-gray-800 w-fit px-4 py-2">
           <p className="text-slate-400 font-light font-sans">{message.message}</p>
         </div>
       </div>
