@@ -11,12 +11,9 @@
 
  ## Screenshots
  ### 1. Create new DM flow:
- <img src="./assets/images/dm-2.png" alt="dm-2" width="400"/>
- <img src="./assets/images/dm-3.png" alt="dm-3" width="400"/>
- <img src="./assets/images/dm-4.png" alt="dm-4" width="400"/>
- <img src="./assets/images/dm-5.png" alt="dm-5" width="400"/>
+ <img src="./assets/images/dm-2.png" alt="dm-2" width="400"/> <img src="./assets/images/dm-3.png" alt="dm-3" width="400"/>
+ <img src="./assets/images/dm-4.png" alt="dm-4" width="400"/> <img src="./assets/images/dm-5.png" alt="dm-5" width="400"/>
 
  ### 2. Create new room flow
- <img src="./assets/images/room-1.png" alt="room-1" width="400"/>
- <img src="./assets/images/room-2.png" alt="room-2" width="400"/>
+ <img src="./assets/images/room-1.png" alt="room-1" width="400"/> <img src="./assets/images/room-2.png" alt="room-2" width="400"/>
  <img src="./assets/images/room-3.png" alt="room-3" width="400"/>
