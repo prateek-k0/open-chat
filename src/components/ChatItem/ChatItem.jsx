@@ -25,7 +25,7 @@ const ChatItem = ({ room, clickHandler = () => {}, collapsed = false }) => {
         {isRoomUpdated && <div className="bg-red-500 w-2 h-2 rounded-full absolute right-1 top-0 notification-dot"></div>}
       </div>
       {collapsed === false && <div className="max-w-full box-border overflow-hidden content">
-        <p className="text-md font-semibold whitespace-nowrap text-ellipsis overflow-hidden">{room.isDM ? otherUserDetails.user.username : room.roomName}</p>
+        <p className="text-md font-semibold whitespace-nowrap text-ellipsis overflow-hidden">{room.isDM ? otherUsername : room.roomName}</p>
         <p className={`text-sm ${isRoomUpdated ? 'font-bold' : 'font-extralight'} whitespace-nowrap text-ellipsis overflow-hidden`}>{lastMessage}</p>
       </div>}
       {collapsed === false && unseenMessageCount > 0 && <div 
