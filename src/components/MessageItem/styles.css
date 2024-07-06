@@ -1,0 +1,8 @@
+.message-container-right {
+  max-width: 80%;
+  align-items: flex-start;
+}
+.message-container-left {
+  max-width: 80%;
+  align-items: flex-end;
+}
